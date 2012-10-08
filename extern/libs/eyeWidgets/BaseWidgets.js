@@ -1,18 +1,22 @@
 /*global Base64, CodePress, createWidget, enableShadow, escape, EventHandler, evilEval, eyeKeyDown, eyeParam, fixPNG, getArrayArg, html_entity_decode, IEversion, makeDrag, md5, raiseZIndex, sendMsg, Taskbars, tinymce, tinyMCE, unescape, updateCss, updateOpacityOnce, USERTHEME, xAddEventListener, xEnableDrag, xEnableDrag2, xEnableDrop, xEvent, xGetElementById, xHeight, xLeft, xMoveTo, xPageX, xPageY, xTop, xWidth, xZIndex, zindex */
 /*jslint browser: true, devel: true, newcap: true, sloppy: true, windows: true */
 /*
-  ___  _ __   ___ _   _  ___
- / _ \| '_ \ / _ \ | | |/ _ \
-| (_) | | | |  __/ |_| |  __/
- \___/|_| |_|\___|\__, |\___|
-                  |___/
+ _____           _____                     
+|  ___|         /  ___|                    
+| |__ _   _  ___\ `--.  ___ _ ____   _____ 
+|  __| | | |/ _ \`--. \/ _ \ '__\ \ / / _ \
+| |__| |_| |  __/\__/ /  __/ |   \ V /  __/
+\____/\__, |\___\____/ \___|_|    \_/ \___|
+       __/ |                               
+      |___/                                
 
-oneye is released under the GNU Affero General Public License Version 3 (AGPL3)
+EyeServeOS is released under the GNU Affero General Public License Version 3 (AGPL3)
  -> provided with this release in license.txt
  -> or via web at www.gnu.org/licenses/agpl-3.0.txt
 
 Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
              since 2010 Lars Knickrehm (mail@lars-sh.de)
+			 since 2012 EyeServe Team (contact@eyeserve.net)
 */
 
 var txtAreas = {};
