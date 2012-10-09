@@ -774,7 +774,7 @@ function sendMsg(checknum, msg, parameters) {
 		}
 	}
 	if (!http_request) {
-		alert('Sorry, but oneye only works with AJAX capable browsers!');
+		alert('Sorry, but EyeServeOS only works with AJAX capable browsers!');
 		return false;
 	}
 	if (msg !== 'ping') {
