@@ -64,11 +64,11 @@ function eyeInfo_run($params = '') {
 		'y' => 100
 	));
 	$myTab->show();
+	$esosTab = $myTab->addTab('EyeServe Team', 1);
 	$oneyeTab = $myTab->addTab('oneye Team', 1);
 	$eyeosTab = $myTab->addTab('eyeos Team', 1);
-	$supportersTab = $myTab->addTab('Supporters', 1);
 	$projectsTab = $myTab->addTab('Projects', 1);
-	$myTab->selectByName('oneye Team');
+	$myTab->selectByName('EyeServe Team');
 
 	$myImagebox = new Imagebox(array(
 		'father' => 'eyeInfo_Tab',
@@ -80,6 +80,40 @@ function eyeInfo_run($params = '') {
 		'y' => 10
 	));
 	$myImagebox->show();
+	
+	$esos = array('Alejandro Fiestas','Anaël Ollier','Daniel Gil','Jordi Ferrer','José Carlos Norte','Lars Knickrehm','Marc Cercós','Matthew Powell','Pau Garcia-Milà','Pau Peris','Pol Watine','Adrián Norte','Julia Garcia');
+	shuffle($esos);
+	$y = ($myTab->height - (count($esos)*4)) / count($esos);
+
+	// BEGIN EYESERVEOS
+	
+	$esos = array('Jordan Donaldson (Jordohio)','Drew Ardner (Kyomaru)','Thomas Marin (Cpt. Mashek)');
+	$y = ($myTab->height - (count($esos)*4)) / count($esos);
+
+	$myLabel = new Label(array(
+		'father' => $supportersTab,
+		'name' => 'eyeInfo_Label_Supporters',
+		'text' => 'EyeServe Team',
+		'x' => 10,
+		'y' => 10
+	));
+	$myLabel->show();
+	$myLabel->setCss(array('font-weight' => 'bold'));
+
+	$i = 0;
+	foreach ($esos as $value) {
+		$myLabel = new Label(array(
+			'father' => $esosTab,
+			'name' => 'eyeInfo_Label_Supporters_' . $i,
+			'text' => $value,
+			'x' => 20,
+			'y' => $i * $y + 25
+		));
+		$myLabel->show();
+		$i++;
+	}
+	
+	// END EYESERVEOS
 
 	$oneye = array('Lars Knickrehm', 'Luca Ferrario', 'Daniel Sousa', 'Matthew Powell');
 	$y = ($myTab->height - (count($oneye)*4)) / count($oneye);
@@ -126,33 +160,6 @@ function eyeInfo_run($params = '') {
 		$myLabel = new Label(array(
 			'father' => $eyeosTab,
 			'name' => 'eyeInfo_Label_Team_' . $i,
-			'text' => $value,
-			'x' => 20,
-			'y' => $i * $y + 25
-		));
-		$myLabel->show();
-		$i++;
-	}
-
-	$supporters = array('Alexandre Mejat','David Comuñas','Edouard Daubin','François Bocquet');
-	shuffle($supporters);
-	$y = ($myTab->height - (count($supporters)*4)) / count($supporters);
-
-	$myLabel = new Label(array(
-		'father' => $supportersTab,
-		'name' => 'eyeInfo_Label_Supporters',
-		'text' => 'Community Supporters',
-		'x' => 10,
-		'y' => 10
-	));
-	$myLabel->show();
-	$myLabel->setCss(array('font-weight' => 'bold'));
-
-	$i = 0;
-	foreach ($supporters as $value) {
-		$myLabel = new Label(array(
-			'father' => $supportersTab,
-			'name' => 'eyeInfo_Label_Supporters_' . $i,
 			'text' => $value,
 			'x' => 20,
 			'y' => $i * $y + 25
